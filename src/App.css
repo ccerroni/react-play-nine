@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-container {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+hr {
+    background-color: #61dafb;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.card {
+  background-color: #282c34 !important;
+  border-color: #61dafb !important;
+}
+
+.star-game {
+  margin: 0.5em;
+  font-size: 24px;
+}
+
+.number-game {
+  display: inline-block;
+  margin: 0.5em;
+  text-align: center;
+  background-color: #ccc;
+  color: #282c34;
+  width: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.number-game.selected {
+  background-color: #343f42;
+  color: rgb(92, 92, 92);
+  cursor: not-allowed;
+
+}
+
+.number-game.used {
+  background-color: #54c254;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
