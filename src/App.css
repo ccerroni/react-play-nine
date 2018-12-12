@@ -42,6 +42,8 @@ hr {
   background-color: #ccc;
   color: #282c34;
   width: 32px;
+  height: 32px;
+  font-size: 0.8em;
   border-radius: 50%;
   cursor: pointer;
 }

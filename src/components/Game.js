@@ -26,7 +26,7 @@ var possibleCombinationSum = function (arr, n) {
 class Game extends React.Component {
     static randomNumber = () => { return 1 + Math.floor(Math.random() * 9); };
 
-    static initianState = () => {
+    static initialState = () => {
         return {
             selectedNumbers: [],
             numberOfStars: Game.randomNumber(),
@@ -36,7 +36,7 @@ class Game extends React.Component {
             doneStatus: null
         }
     };
-    state = Game.initianState();
+    state = Game.initialState();
 
     selectNumber = (clickedNumber) => {
         if (this.state.usedNumbers.indexOf(clickedNumber) >= 0) { return; }
@@ -55,7 +55,6 @@ class Game extends React.Component {
     };
 
     checkAnswer = () => {
-        console.log('ckecking');
         this.setState(
             prevState => ({
                 answerIsCorrect: prevState.numberOfStars === prevState.selectedNumbers.reduce((acc, n) => acc + n, 0)
@@ -111,9 +110,11 @@ class Game extends React.Component {
     };
 
     resetGame = () => {
-        this.setState( ()=> {
-            Game.initianState()
-        });
+        this.setState(
+            () => {
+                return Game.initialState()
+            }
+        );
     };
 
     render() {
